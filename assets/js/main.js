@@ -74,9 +74,57 @@ $(function () {
       });
     });
   })();
-  
-  
 
+
+
+  // Aboutus section slider JS
+
+  $(function () {
+    $('.hub-slider-slides').hubSlider({
+        selector: $('a'),
+        button: {
+            next: $('.hub-slider-arrow_next'),
+            prev: $('.hub-slider-arrow_prev')
+        },
+        transition: '1s',
+        startOffset: 25,
+        auto: true,
+        time: 3 // secondly
+    });
+});
+// Aboutus section slider JS END
+
+// Services Slider JS Start
+
+$(document).ready(function () {
+  $(".my-slider").slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    speed: 300,
+    infinite: true,
+    autoplaySpeed: 5000,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+});
+
+// Services Slider JS End
+  
 });
 
 
