@@ -3,9 +3,10 @@
     CSS INDEX
     ===================
     01. COMMON
-	02. NAVBAR
-    03. BANNER
-    04. ABOUT US
+    02. TOBBAR 
+	03. NAVBAR
+    04. BANNER
+    05. ABOUT US
 -----------------------------------------------------------------------------------*/
 /*===========================
       01.COMMON css 
@@ -74,16 +75,21 @@ p {
     color: var(--primary-black);
     margin: 0px;
 }
-section,.full-width{
+
+/* section,
+.full-width {
     float: left;
     width: 100%;
-}
-.ptb-90{
+} */
+
+.ptb-90 {
     padding: 90px 0;
 }
-.mtb-30{
+
+.mtb-30 {
     margin: 30px 0;
 }
+
 /*===== Slick Slide Style =====*/
 .slick-slide {
     outline: 0;
@@ -105,13 +111,15 @@ section,.full-width{
     text-decoration: none;
     background: var(--priamary-yellow);
     z-index: 9;
-  }
-  .btn-animated b{
+}
+
+.btn-animated b {
     position: relative;
     z-index: 9;
     font-size: 22px;
-  }
-  .btn-animated span {
+}
+
+.btn-animated span {
     position: absolute;
     display: block;
     width: 0;
@@ -123,18 +131,353 @@ section,.full-width{
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: -1;
-  }
-  .btn-animated:hover {
+}
+
+.btn-animated:hover {
     color: #ffffff;
-  }
-  .btn-animated:hover span {
+}
+
+.btn-animated:hover span {
     width: 225%;
     height: 562.5px;
-  }
-  
+}
 
 /*===========================
-        02.NAVBAR css 
+      02.TOBBAR css 
+===========================*/
+.topbar-right-area {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.tobbar-info {
+    padding: 0.82rem 0;
+}
+
+.topbat-contact-detail ul {
+    display: flex;
+    align-items: center;
+}
+
+.topbat-contact-detail ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.topbat-contact-detail ul li .icon i {
+    font-size: 14px;
+}
+
+.topbat-contact-detail ul li a {
+    font-size: 14px;
+    color: var(--primary-black);
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.topbat-contact-detail ul li a:hover {
+    color: var(--primary-blue);
+}
+
+.custom-search-bar {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.custom-search-bar input {
+    border: none;
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    color: #213B55;
+    font-weight: 500;
+    width: 220px;
+    background: rgba(199, 199, 199, 0.30);
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    top: 2px;
+}
+
+.custom-search-bar input::placeholder {
+    color: var(--primary-black);
+    opacity: 1
+}
+
+.custom-search-bar input:-ms-input-placeholder {
+    color: var(--primary-black);
+}
+
+.custom-search-bar input::-ms-input-placeholder {
+    color: var(--primary-black);
+}
+
+/* .wrapper {
+    width: 300px;
+    margin: 3% auto;
+} */
+
+.dropdown dd,
+.dropdown dt,
+.dropdown ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown dd ul li a span:first-child,
+.dropdown dt a span span:first-child {
+    background-image: url('https://i.imgur.com/OQiDoZe.png');
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 11px;
+    display: inline-block;
+    margin: 5px;
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.dropdown dt a span {
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.dropdown dt a img {
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown dt a span span:first-child:before {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+.dropdown dt a span span {
+    display: inline-block;
+    padding: 0;
+}
+
+.dropdown dt a span span:first-child {
+    padding: 0;
+}
+
+.dropdown dd {
+    position: relative;
+}
+
+.dropdown a,
+.dropdown a:visited {
+    color: #4a535f;
+    text-decoration: none;
+    outline: none;
+}
+
+.dropdown a:hover {
+    color: #5d4617;
+}
+
+.dropdown dt a:hover,
+.dropdown dt a:focus {
+    color: #5d4617;
+}
+
+.dropdown dt a {
+    position: relative;
+    background: transparent;
+    display: block;
+    /* padding-right: 45px; */
+    overflow: hidden;
+}
+
+/* .dropdown dt a:after {
+    content: '';
+    background: #ed4267;
+    position: absolute;
+
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+} */
+
+/* .dropdown dt a:before {
+    background: none repeat scroll 0 0 #FFFFFF;
+    content: "";
+    height: 3px;
+    position: absolute;
+    right: 7px;
+    top: 6px;
+    width: 20px;
+    z-index: 2;
+    box-shadow: 0 8px 0 #FFFFFF, 0 16px 0 #FFFFFF;
+} */
+
+.dropdown dd ul {
+    background: #ffffff;
+    color: #213B55;
+    display: none;
+    left: 0px;
+    padding: 5px 0px;
+    position: absolute;
+    width: 200px;
+    list-style: none;
+    max-height: 220px;
+    overflow-y: scroll;
+    top: 10px;
+    z-index: 99;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+li a {
+    font-size: 13px;
+}
+
+li a span:nth-child(2) {
+    line-height: 2em;
+}
+
+.dropdown dd ul::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown dd ul::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+
+}
+
+.dropdown dd ul::-webkit-scrollbar-thumb:window-inactive {
+    background: blue;
+}
+
+.dropdown span.value {
+    display: none;
+}
+
+.dropdown dd ul li a {
+    padding: 5px;
+    display: block;
+    font-size: 12px !important;
+    color: var(--primary-black);
+    font-weight: 500;
+}
+
+.dropdown dd ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+dl.dropdown {
+    width: auto;
+    margin: 0;
+}
+
+dl.dropdown span:nth-child(3) {
+    color: var(--primary-black);
+}
+
+dl.dropdown>span:nth-child(2) {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+dl.dropdown span:nth-child(3) {
+    float: right;
+}
+
+dl.dropdown dt span:nth-child(2) {
+    color: var(--primary-black);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+dl.dropdown dt span:nth-child(3) {
+    display: none;
+}
+
+.countryFlag {
+    padding: 0;
+    background-image: url("https://i.imgur.com/OQiDoZe.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 11px;
+    margin-right: 4px;
+    width: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #BFBFC1 #B6B6B6 #969696;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.09);
+}
+
+.latest-alert-stripe {
+    background: #213B55;
+   display: flex;
+   align-items: center;
+}
+.alert-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #FFD20D;
+    margin-right: 5px;
+}
+.alert-text ul {
+    display: flex;
+    align-items: center;
+    list-style-type: disc;
+    color: var(--primary-blue);
+    padding-left: 25px;
+    animation: textEffect 5s infinite linear;
+}
+.alert-text ul:hover{
+    animation-play-state: paused;
+}
+.alert-text ul li {
+    white-space: nowrap;
+    padding-right: 20px;
+   
+}
+.alert-text ul li a {
+    color: #ffffff;
+    font-size: 15px;
+    padding-right: 10px;
+    
+}
+@keyframes textEffect{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+.alert-text ul a:hover {
+    color:var(--priamary-yellow);
+}
+
+/*===========================
+      03.NAVBAR css 
 ===========================*/
 .navbar-area {
     padding: 2rem 0;
@@ -326,7 +669,7 @@ section,.full-width{
     padding: 20px 0 10px 0;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 3.5rem;
     width: 100%;
     z-index: 9;
     transition: 0.4s ease-in-out all;
@@ -336,6 +679,7 @@ section,.full-width{
     position: fixed;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
     padding: 8px 0;
+    top: 0;
     backdrop-filter: blur(10px);
     animation: slideDown 0.55s ease-out;
 }
@@ -357,19 +701,23 @@ section,.full-width{
 .navbar-expand-lg .navbar-collapse {
     justify-content: end;
 }
+
 /*===========================
-    3.BANNER css 
+    04 .BANNER css 
 ===========================*/
 .main-banner-section {
     padding: 200px 0 120px;
     background: var(--primary-blue);
 }
-.main-banner-section .container{
+
+.main-banner-section .container {
     max-width: 1300px;
 }
+
 .banner-content {
     text-align: center;
 }
+
 .banner-content h1 {
     font-size: 84px;
     font-weight: 800;
@@ -380,10 +728,10 @@ section,.full-width{
 
 
 /*===========================
-      04.ABOUT US css 
+      05.ABOUT US css 
 ===========================*/
 
-.border-text h1{
+.border-text h1 {
     font-weight: 800;
     font-size: 90px;
     -webkit-text-fill-color: transparent;
@@ -393,10 +741,12 @@ section,.full-width{
     font-family: 'Montserrat', sans-serif;
     padding-left: 30px;
 }
-.border-text{
+
+.border-text {
     position: relative;
 }
-.border-text span{
+
+.border-text span {
     position: absolute;
     font-size: 14px;
     font-weight: 700;
@@ -406,9 +756,81 @@ section,.full-width{
     top: 50%;
     transform: translateY(-50%);
 }
-.heading-txt{
+
+.heading-txt {
     color: var(--primary-black);
     font-size: 48px;
     font-weight: 700;
     line-height: 55px;
+}
+/*===========================
+      05.SOFTWARE AGNOSTICS css 
+===========================*/
+.software-agnostics {
+    position: relative;
+    background: linear-gradient(to left,#ffffff 50%,#0078c8 50%);
+    width: 100%;
+    overflow: hidden;
+
+}
+.we-work-area{
+    padding: 7.5rem 0;
+}
+.common-title-area {
+    position: relative;
+}
+.common-title-area h2 {
+    font-size: 84px;
+    font-weight: 800;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #2F5378;
+    background: transparent;
+    font-family: sans-serif;
+}
+.common-title-area span {
+    position: absolute;
+    top: 45%;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.software-para{
+    width: 75%;
+    color: #ffffff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    margin-top: 2rem
+}
+.software-agnostics .left-side {
+    position: absolute;
+    padding: 7.5rem 0;
+}
+.client-logo-box {
+    height: 750px;
+}
+.client-grid li {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.25);
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: logoEffect 4s infinite linear;
+}
+.client-grid li:last-child{
+    margin-bottom: 0;
+}
+@keyframes logoEffect{
+    0%{
+        transform:translateY(0%)
+    }
+    100%{
+        transform:translateY(-50%)
+    }
 }
