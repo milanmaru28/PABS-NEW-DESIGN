@@ -169,7 +169,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $("#ind-slider-right").slick({
-    slidesToShow: 2.7,
+    slidesToShow: 2.6,
     slidesToScroll: 1,
     arrows: false,
     dots: false,
@@ -181,13 +181,13 @@ $(document).ready(function () {
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 2.5
+          slidesToShow: 2.4
         }
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1.6
+          slidesToShow: 1.4
         }
       }
     ]
@@ -237,7 +237,14 @@ $(document).ready(function () {
 });
 
 // Testimonial Slider JS End
-  
+
+
+//===== Prealoder==========//
+$(window).on('load', function (event) {
+  $('.preloader').delay(500).fadeOut(500);
+});
+//===== Prealoder==========//
+
 });
 
 
