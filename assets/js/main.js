@@ -138,11 +138,13 @@ $(document).ready(function () {
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: true,
-    dots: true,
+    dots: false,
     speed: 300,
     infinite: true,
     autoplaySpeed: 5000,
     autoplay: true,
+    prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
+    nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
     responsive: [
       {
         breakpoint: 991,
@@ -161,7 +163,84 @@ $(document).ready(function () {
 });
 
 // Services Slider JS End
+
+
+// Industries Slider JS Start
+
+$(document).ready(function () {
+  $("#ind-slider-right").slick({
+    slidesToShow: 2.7,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    speed: 300,
+    infinite: false,
+    autoplaySpeed: 5000,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2.5
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1.6
+        }
+      }
+    ]
+  });
+});
+
+$('#icon-left').click(function () {
+  $('#ind-slider-right').slick('slickPrev');
+});
+$('#icon-right').click(function () {
+    $('#ind-slider-right').slick('slickNext');
+});
+
+// Industries Slider JS End
+
+
+
+// Testimonial Slider JS Start
+
+$(document).ready(function () {
+  $(".video-testimonial-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    speed: 300,
+    infinite: true,
+    autoplaySpeed: 5000,
+    autoplay: false,
+    prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
+    nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+});
+
+// Testimonial Slider JS End
   
 });
+
+
+
 
 
