@@ -1,0 +1,12 @@
+@media only screen and (max-width: 1600px) {
+    .client-grid {
+        margin-right: 1rem;
+    }
+    .software-agnostics .offset-md-5 {
+        margin-left: 28%;
+    }
+    .software-para{
+        width: 100%;
+    }
+
+}

@@ -141,7 +141,7 @@ $(document).ready(function () {
     dots: false,
     speed: 300,
     infinite: true,
-    autoplaySpeed: 5000,
+    // autoplaySpeed: 5000,
     autoplay: true,
     prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
     nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
