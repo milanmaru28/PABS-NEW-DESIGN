@@ -11,6 +11,9 @@
     03. BANNER
     04. ABOUT US
     05. SERVICES
+    06. INDUSTRIES  
+    07. TESTIMONIAL
+    08. FOOTER
 -----------------------------------------------------------------------------------*/
 /*===========================
       01.COMMON css 
@@ -1272,7 +1275,7 @@ dl.dropdown dt span:nth-child(3) {
 
 
   /*===========================
-        10.FOOTER css 
+        08.FOOTER css 
 ===========================*/
 .pabs-footer{
     background-color: #fff;
