@@ -1,0 +1,71 @@
+:root {
+  --width1: -200%;
+  --width2: -200%;
+  --time: 50s;
+  --time_mirror: 50s;
+}
+.text-running-inner {
+  animation: translateinfinite var(--time) linear infinite;
+}
+@keyframes translateinfinite {
+  100% {
+    transform: translateX(calc(var(--width1)));
+  }
+}
+.text-running-inner.mirror {
+  animation: translateinfinite_2 var(--time_mirror) linear infinite;
+}
+@keyframes translateinfinite_2 {
+  100% {
+    transform: translateX(calc(var(--width2)));
+  }
+}
+/* Floating msg button hero */
+.btn-hero {
+  right: calc(50% - 7.5em);
+  bottom: calc(100vh - 34rem);
+}
+.btn-hero.float {
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+}
+.btn-hero.fixed-ver {
+  /* visibility: hidden; */
+}
+.btn-hero.fixed-ver.float {
+  visibility: visible;
+}
+.btn-hero.float .btn-text {
+  display: none;
+}
+.btn-hero.float .msg-icon-hero {
+  display: block !important;
+}
+.d-none {
+  display: none !important;
+}
+.d-flex {
+  display: flex !important;
+}
+.d-block {
+  display: block !important;
+}
+.w-nav-overlay {
+  top: 0 !important;
+  height: 100vh !important;
+}
+.fp-section {
+  display: flex;
+  align-items: center;
+}
+.img-curson-wrapper {
+  visibility: hidden;
+  transition: opacity 200ms ease, filter 200ms linear, transform 200ms linear,
+    opacity 200ms linear, -webkit-filter 200ms linear,
+    -webkit-transform 200ms linear, visibility 100ms linear, height 200ms linear,
+    width 200ms linear;
+}
+.img-curson-wrapper.active {
+  visibility: visible;
+}

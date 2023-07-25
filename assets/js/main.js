@@ -55,26 +55,46 @@ $(function () {
   });
 
    //===== Animated btn
-
-   (function() {
-    const buttons = document.querySelectorAll(".btn-animated");
-  
-    buttons.forEach(button => {
-      ["mouseenter", "mouseout"].forEach(evt => {
-        button.addEventListener(evt, e => {
-          let parentOffset = button.getBoundingClientRect(),
-              relX = e.pageX - parentOffset.left,
-              relY = e.pageY - parentOffset.top;
-  
-          const span = button.getElementsByTagName("span");
-  
-          span[0].style.top = relY + "px";
-          span[0].style.left = relX + "px";
-        });
+   $(function() {  
+    $('.btn-animated')
+      .on('mouseenter', function(e) {
+        var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({top:relY, left:relX})
+      })
+      .on('mouseout', function(e) {
+        var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({top:relY, left:relX})
       });
-    });
-  })();
+    $('[href=#]').click(function(){return false});
+  });
+
+
+
+  //  (function() {
+  //   const buttons = document.querySelectorAll(".btn-animated");
   
+  //   buttons.forEach(button => {
+  //     ["mouseenter", "mouseout"].forEach(evt => {
+  //       button.addEventListener(evt, e => {
+  //         let parentOffset = button.getBoundingClientRect(),
+  //             relX = e.pageX - parentOffset.left,
+  //             relY = e.pageY - parentOffset.top;
+  
+  //         const span = button.getElementsByTagName("span");
+  
+  //         span[0].style.top = relY + "px";
+  //         span[0].style.left = relX + "px";
+  //       });
+  //     });
+  //   });
+  // })();
+
+  
+  //===== Country dropdown 
 
   function setCountry(code) {
     if (code || code == '') {
@@ -94,7 +114,7 @@ $(function () {
       var text = $(this).html();
       $(".dropdown dt a span").html(text);
       $(".dropdown dd ul").hide();
-      $("#result").html("Selected value is: " + getSelectedValue("country-select"));
+      $("#result").html("Selected value is: " + getSelectedValue(".country-select1"));
     });
 
     function getSelectedValue(id) {
@@ -141,7 +161,9 @@ $(document).ready(function () {
     dots: false,
     speed: 300,
     infinite: true,
-    // autoplaySpeed: 5000,
+    // centerMode: true,
+    // centerPadding: '60px',
+    autoplaySpeed: 5000,
     autoplay: true,
     prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
     nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
@@ -161,6 +183,47 @@ $(document).ready(function () {
     ]
   });
 });
+
+// $('.wrapslide').slick({
+//   dots: false,
+//   infinite: true,
+//   speed: 300,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+//   slidesToShow: 5,
+//   slidesToScroll: 1,
+//   arrows: true,
+//   prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
+//   nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
+//   responsive: [
+//     {
+//       breakpoint: 1024,
+//       settings: {
+//         slidesToShow: 3,
+//         slidesToScroll: 3,
+//         infinite: true,
+//         dots: true
+//       }
+//     },
+//     {
+//       breakpoint: 600,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 2
+//       }
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       }
+//     }
+//     // You can unslick at a given breakpoint now by adding:
+//     // settings: "unslick"
+//     // instead of a settings object
+//   ]
+// });
 
 // Services Slider JS End
 
@@ -212,7 +275,7 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    dots: false,
+    dots: true,
     speed: 300,
     infinite: true,
     autoplaySpeed: 5000,
@@ -245,6 +308,38 @@ $(window).on('load', function (event) {
 });
 //===== Prealoder==========//
 
+});
+
+// Button animation 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btnFloat = document.querySelectorAll(".btn-hero"),
+    body = document.querySelector("body");
+  let isMenuAlreadyOpen = false;
+  if (isMenuAlreadyOpen) {
+    body.classList.remove("menu-open");
+    isMenuAlreadyOpen = false;
+  }
+
+  $(window).bind("mousewheel", function (event) {
+    var doc = document.documentElement;
+    let height = screen.height;
+    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    if (event.originalEvent.wheelDelta >= 0) {
+      if (top <= height) {
+        btnFloat.forEach((btn) => btn.removeAttribute("style"));
+        setTimeout(() => {
+          btnFloat.forEach((btn) => btn.classList.remove("float"));
+        }, 100);
+      }
+    } else {
+      if (top) {
+        setTimeout(() => {
+          btnFloat.forEach((btn) => btn.classList.add("float"));
+        }, 1200);
+      }
+    }
+  });
 });
 
 

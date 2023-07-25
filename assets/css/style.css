@@ -726,6 +726,7 @@ dl.dropdown dt span:nth-child(3) {
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
     padding: 8px 0;
     top: 0;
+    z-index: 99;
     background-color: var(--primary-blue);
     animation: slideDown 0.55s ease-out;
 }
@@ -792,7 +793,7 @@ dl.dropdown dt span:nth-child(3) {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgba(193, 223, 244, 1);
     background: transparent;
-    font-family: 'Montserrat', sans-serif;
+    font-family:  sans-serif;
     padding-left: 30px;
     line-height: 95px;
     margin: 0;
@@ -1117,7 +1118,7 @@ dl.dropdown dt span:nth-child(3) {
 ===========================*/
 
 .services .container-fluid{
-    max-width: 1680px;
+    max-width: 1780px;
     margin: 0 auto;
 }
 .bg-blue{
@@ -1152,59 +1153,24 @@ dl.dropdown dt span:nth-child(3) {
 .slick-prev:before {
     color: #fff;
     font-size: 26px;
+    display: none;
 }
-
-/*===========================
-        06.CONTACT US css 
-===========================*/
-.block-text-title{
-    display: inline-block;
-}
-.block-text-title span{
-    left: 0;
-    color: #ffffff;
-}
-.contact-form {
-    margin-top: 2rem;
-}
-.contact-form .form-control {
-    border-radius: 5px;
-    padding: 0.7rem 1rem;
-    height: auto;
-    color: #000000;
-    font-size: 18px;
-    font-weight: 400;
-}
-.contact-form .form-group {
-    margin-bottom: 1.25rem;
-}
-/* Custom placeholder color */
-.contact-form .form-control::-ms-input-placeholder{
-    color: #000000;
-}
-.contact-form .form-control::-webkit-input-placeholder{
-    color: #000000;
-}
-.contact-form .form-control::-moz-placeholder{
-    color: #000000;
-}
-.contact-form .form-control::placeholder{
-    color: #000000;
-    opacity: 1;
-}
-.services-slider .slick-list{
+/* .services-slider .slick-list{
     overflow: visible;
+} */
+.services-slider .slick-list{
+    padding: 2rem 0;
 }
   .service-slide {
     border-radius: 33px;
     background: #C1DFF4;
     box-shadow: -21px 0px 28px 0px rgba(0, 0, 0, 0.25);
     color: var(--primary-black);
-    margin: 0 15px 0 0;
-    padding: 40px 30px 40px 40px;
+    /* margin: 0 15px 0 0; */
+    padding: 40px 20px 40px 40px;
     min-height: 390px;
     position: relative;
-    margin: 0 -30px;
+    /* margin: 0 -5px; */
     transition: all ease-in-out 0.7s;
   }
   .service-slide:hover{
@@ -1264,6 +1230,99 @@ dl.dropdown dt span:nth-child(3) {
     height: auto;
     width: auto;
   }
+  /* .service-slide1{
+    background: var(--primary-blue);
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+  } */
+
+/*===========================
+        06.CONTACT US css 
+===========================*/
+.block-text-title{
+    display: inline-block;
+}
+.block-text-title span{
+    left: 0;
+    color: #ffffff;
+}
+.contact-form {
+    margin-top: 2rem;
+}
+.contact-form .form-control {
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+    height: auto;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+}
+.contact-form .form-group {
+    margin-bottom: 1.25rem;
+}
+/* Custom placeholder color */
+.contact-form .form-control::-ms-input-placeholder{
+    color: #000000;
+}
+.contact-form .form-control::-webkit-input-placeholder{
+    color: #000000;
+}
+.contact-form .form-control::-moz-placeholder{
+    color: #000000;
+}
+.contact-form .form-control::placeholder{
+    color: #000000;
+    opacity: 1;
+}
+
+  .contact-country{
+    border-radius: 5px;
+    background: #FFF;
+  }
+  .contact-country .dropdown dt a img{
+    position: absolute;
+    z-index: 1;
+    right: 12px;
+    top: 22px;
+  }
+  .contact-country .dropdown dt a{
+    padding:7px;
+  }
+  .contact-country dl.dropdown dt span:nth-child(2) {
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 2px;
+}
+.custom-select-dropdown select{
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 12px 10px;
+    appearance: none;
+}
+.custom-select-dropdown {
+    position: relative;
+}
+.custom-select-dropdown img {
+    position: absolute;
+    top: 22px;
+    right: 12px;
+}
+.submit-btn{
+    max-width: 240px;
+    margin: 0;
+    border: none;
+}
+.submit-btn span{
+    background-color: var(--primary-blue);
+}
+
+
 
 
   /*===========================
@@ -1391,7 +1450,6 @@ dl.dropdown dt span:nth-child(3) {
     background-image: url(../images/right-arow.svg);
 }
 
-
   /*===========================
         07.TESTIMONIAL css 
 ===========================*/
@@ -1402,10 +1460,11 @@ dl.dropdown dt span:nth-child(3) {
 .testimonial-slide{
     border-radius: 13px;
     background: #FFF;
-    box-shadow: 2px 2px 19px 2px rgba(60, 60, 60, 0.25);
-    margin: 0 15px 0 0;
+    box-shadow: 2px 2px 3px 2px rgba(60, 60, 60, 0.25);
+    margin: 30px 15px 30px 2px;
     transition: all ease-in-out 0.7s;
     overflow: hidden;
+    padding-left: 2px;
   }
 .testimonial-slider .slick-next,
 .testimonial-slider .slick-prev {
@@ -1427,12 +1486,20 @@ dl.dropdown dt span:nth-child(3) {
 }
 .testi-image-box{
     height: 250px;
-    box-shadow: 2px 2px 19px 2px rgba(191, 191, 191, 0.25);
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
 }
 .testi-image-box img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.testi-image-box img:hover {
+    transform: scale(1.3);
 }
 .testi-left-txt h5{
     color: var(--primary-black);
