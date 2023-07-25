@@ -252,11 +252,6 @@ p {
     color: var(--primary-black);
 }
 
-/* .wrapper {
-    width: 300px;
-    margin: 3% auto;
-} */
-
 .dropdown dd,
 .dropdown dt,
 .dropdown ul {
@@ -330,33 +325,8 @@ p {
     position: relative;
     background: transparent;
     display: block;
-    /* padding-right: 45px; */
     overflow: hidden;
 }
-
-/* .dropdown dt a:after {
-    content: '';
-    background: #ed4267;
-    position: absolute;
-
-    height: 32px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 35px;
-} */
-
-/* .dropdown dt a:before {
-    background: none repeat scroll 0 0 #FFFFFF;
-    content: "";
-    height: 3px;
-    position: absolute;
-    right: 7px;
-    top: 6px;
-    width: 20px;
-    z-index: 2;
-    box-shadow: 0 8px 0 #FFFFFF, 0 16px 0 #FFFFFF;
-} */
 
 .dropdown dd ul {
     background: #ffffff;
@@ -772,7 +742,93 @@ dl.dropdown dt span:nth-child(3) {
     line-height: 100px;
     margin-bottom: 2rem;
 }
+/* Lottie animated btn style */
+.btn-hero {
+    right: calc(50% - 7.5em);
+    bottom: calc(100vh - 36rem);
+  }
+  .btn-hero.float {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+  }
+  
+  .btn-hero.fixed-ver.float {
+    visibility: visible;
+  }
+  .btn-hero.float .btn-text {
+    display: none;
+  }
+  .btn-hero.float .msg-icon-hero {
+    display: block !important;
+  }
+  .btn-lottie {
+    grid-column-gap: .625em;
+    color: #fff;
+    background-color: #ff6e00;
+    border-radius: .5em;
+    align-items: center;
+    padding: 1.5em 3.25em 1.25em;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden
+}
 
+.btn-lottie:active {
+    transform: scale(.95)
+}
+
+.btn-lottie.btn-hero {
+    z-index: 1;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    transition: border-radius .5s linear, padding .5s linear, right .5s linear, bottom .5s linear;
+    position: absolute
+}
+
+.btn-lottie.btn-hero.float {
+    z-index: 9;
+    opacity: 0;
+    background-color: var(--priamary-yellow);
+    border-radius: 50%;
+    padding: 1.5em
+}
+
+.btn-lottie.btn-hero.fixed-ver {
+    z-index: 99;
+    /* background-color: #ff6e00; */
+    padding: 1.25em 3.25em;
+    position: fixed
+}
+
+.btn-lottie.btn-hero.fixed-ver.float {
+    opacity: 1;
+    padding: 1.5em;
+    display: block;
+    top: auto
+}
+
+.btn-lottie.btn-hero.fixed-ver.modal-btn.float {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2)
+}
+.btn-wrapper.btn-hero-wrapper {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+.msg-icon-hero {
+    width: 2.5em;
+    height: 2.5em;
+    color: #000;
+    display: none
+}
 
 /*===========================
       05.ABOUT US css 
@@ -1246,6 +1302,7 @@ dl.dropdown dt span:nth-child(3) {
 ===========================*/
 .block-text-title{
     display: inline-block;
+    z-index: 9;
 }
 .block-text-title span{
     left: 0;
@@ -1320,6 +1377,11 @@ dl.dropdown dt span:nth-child(3) {
 }
 .submit-btn span{
     background-color: var(--primary-blue);
+}
+.custom-iframe{
+    position: absolute;
+    top: -3rem;
+    left: 3rem;
 }
 
 

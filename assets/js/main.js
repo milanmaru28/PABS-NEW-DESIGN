@@ -340,7 +340,7 @@ $(window).on('load', function (event) {
 
 });
 
-// Button animation 
+// Lottie button animation 
 
 document.addEventListener("DOMContentLoaded", function () {
   const btnFloat = document.querySelectorAll(".btn-hero"),
@@ -366,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (top) {
         setTimeout(() => {
           btnFloat.forEach((btn) => btn.classList.add("float"));
-        }, 1200);
+        }, -10);
       }
     }
   });
