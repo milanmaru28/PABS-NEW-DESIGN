@@ -1674,7 +1674,8 @@ dl.dropdown dt span:nth-child(3) {
     line-height: 22px; 
     padding: 10px 15px;
     border-radius: 50px;
-    background: var(--primary-blue)
+    background: var(--primary-blue);
+    position: absolute;
 }
 .help-btn:hover{
     color: #fff;
@@ -1693,7 +1694,7 @@ dl.dropdown dt span:nth-child(3) {
     height: 170px;
     background: #EFEFEF;
     border-radius: 50%;
-    margin: 0 auto;
+    margin-left: 144px;
     text-align: center;
     padding: 0 20px;
 }
@@ -1780,4 +1781,192 @@ dl.dropdown dt span:nth-child(3) {
       transform: rotate(360deg);
     }
   }
-  
+
+  /* Megamenu CSS START */
+.submenu-link li a{
+    color: var(--primary-black) !important;
+}
+  .main-nav__main-navigation .main-nav__navigation-box > li.dropdown > a {
+    padding-right: 10px;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li.dropdown > a:after {
+    position: absolute;
+    top: -2px;
+    right: -10px;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li ul {
+    position: absolute;
+    width: 230px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+      -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+    -webkit-transition: opacity 500ms ease, visibility 500ms ease,
+      -webkit-transform 500ms ease;
+    transition: opacity 500ms ease, visibility 500ms ease,
+      -webkit-transform 500ms ease;
+    transition: transform 500ms ease, opacity 500ms ease, visibility 500ms ease;
+    transition: transform 500ms ease, opacity 500ms ease, visibility 500ms ease,
+      -webkit-transform 500ms ease;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li ul > li {
+    position: relative;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li ul > li + li {
+    border-top: 1px solid #ccc;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li ul > li > a {
+    font-size: 15px !important;
+    line-height: 19px !important;
+    font-weight: 600;
+     padding: 10px 20px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li ul > li:hover {
+    background-color: var(--primary-blue) !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li ul > li:hover a{
+    color: #fff !important;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li > ul {
+    top: 35px;
+    left: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li:hover > ul {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+  .dropdown:hover > a:after {
+    top: -4px;
+    transform: rotate(180deg);
+    transition: all 0.6s;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li > ul > li > ul {
+    top: 0;
+    left: 100%;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .main-nav__main-navigation .main-nav__navigation-box > li > ul > li:hover > ul {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    visibility: visible;
+    opacity: 1;
+  }
+  .main-nav__main-navigation
+    .main-nav__navigation-box
+    > li
+    > ul
+    > li
+    > ul
+    > li
+    ul {
+    display: none;
+  }
+    /* Megamenu CSS END */
+
+
+/* Industries We Serve CSS */
+.swipe-title{
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 16px; 
+    color: #fff;
+    z-index: 99999;
+    text-transform: uppercase;
+}
+.newsSlider .swiper-slide {
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    width: 23%;
+    border-radius: 10px;
+}
+.newsSlider .swiper-slide .news-item {
+    transition: 0.4s ease-in-out;
+    width: 550px;
+    height: 340px;
+    overflow: hidden;
+    position: relative;
+}
+.news-floater{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.news-floater::before{
+    content: "";
+    background: linear-gradient(46deg, #0078C8 0%, rgba(2, 2, 2, 0.32) 54.44%, rgba(0, 0, 0, 0.00) 100%);
+    width: 100%;
+    height: 340px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 9999;
+}
+.newsSlider .swiper-slide .news-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.newsSlider .swiper-slide.swiper-slide-active {
+    width: 50%;
+}
+.newsSlider .swiper-slide.swiper-slide-active .news-item {
+    width: 100%;
+    transition: 2s ease-in-out;
+}
+.newsSlider .swiper-slide.swiper-slide-active .news-item .news-floater {
+    pointer-events: all;
+}
+.newsSlider .swiper-slide.swiper-slide-active .swipe-title{
+    font-size: 36px;
+    line-height: 56px;
+    animation: reveal 1s forwards; 
+}
+@keyframes reveal {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+}
+.swiper-pagination{
+    bottom: 0 !important;
+}
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 1px solid #CECECE;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+  }

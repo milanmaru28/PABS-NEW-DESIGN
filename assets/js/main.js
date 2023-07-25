@@ -302,11 +302,41 @@ $(document).ready(function () {
 // Testimonial Slider JS End
 
 
+// knowledge center Slider JS Start
+
+$(document).ready(function () {
+  var mySwiper = new Swiper(".newsSlider", {
+    slidesPerView: "auto",
+    spaceBetween: 15,
+    grabCursor: true,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      click(event) {
+          console.log('event.target',this.clickedIndex);
+          mySwiper.slideTo(this.clickedIndex);	
+      },
+    },
+  });
+});
+
+// knowledge center Slider JS End
+
+
 //===== Prealoder==========//
 $(window).on('load', function (event) {
   $('.preloader').delay(500).fadeOut(500);
 });
 //===== Prealoder==========//
+
+
 
 });
 
