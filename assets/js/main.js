@@ -161,10 +161,8 @@ $(document).ready(function () {
     dots: false,
     speed: 300,
     infinite: true,
-    // centerMode: true,
-    // centerPadding: '60px',
     autoplaySpeed: 5000,
-    autoplay: true,
+    autoplay: false,
     prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
     nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
     responsive: [
@@ -311,7 +309,7 @@ $(document).ready(function () {
     grabCursor: true,
     loop: true,
     autoplay: {
-      delay: 4000,
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -371,6 +369,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Phone number Masking
+
+function preventNonNumericalInput(e) {
+  e = e || window.event;
+  var charCode = typeof e.which == "undefined" ? e.keyCode : e.which;
+  var charStr = String.fromCharCode(charCode);
+
+  if (!charStr.match(/^[0-9]+$/)) e.preventDefault();
+}
 
 
 

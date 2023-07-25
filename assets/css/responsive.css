@@ -8,5 +8,124 @@
     .software-para{
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 1400px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .banner-content h1{
+        font-size: 60px;
+        line-height: 75px;
+    }
+    .border-text h1{
+        font-size: 70px;
+        line-height: 85px;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item {
+        margin: 0 15px;
+      }
+    .navbar-area .navbar .navbar-nav .nav-item a{
+        font-size: 15px;
+    }
+    .heading-txt{
+        font-size: 42px;
+        line-height: 50px;
+    }
+    .ptb-100 {
+        padding: 60px 0;
+      }
+
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .banner-content h1 {
+        font-size: 45px;
+        line-height: 60px;
+      }
+      .main-banner-section {
+        padding: 150px 0 100px;
+      }
+      .topbat-contact-detail ul li a{
+        font-size: 13px;
+      }
+      .abt-right-sec {
+        margin-left: 0;
+        margin-top: 30px;
+      }
+      .c-detail-txt h4{
+        font-size: 35px;
+      }
+      .about-exp-main{
+        bottom: -50px;
+      }
+      .main-nav__main-navigation .main-nav__navigation-box > li.dropdown > a::after {
+        top: 5px;
+      }
+      .navbar-area .navbar .navbar-nav .nav-item{
+        margin: 0 30px;
+      }
+      .ind-arrow-fix{
+        top: 14%;
+        right: 10px;
+      }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    .navbar-area{
+        top: 8rem;
+        padding: 20px 0 0 0;
+    }
+    .alert-text ul{
+        padding: 0;
+    }
+    .topbat-contact-detail ul,.topbar-right-area{
+        justify-content: center;
+    }
+    .c-detail-txt {
+        padding-left: 0;
+    }
+    .c-detail-img{
+        margin-bottom: 15px;
+    }
+    .certificate-main {
+        padding-top: 40px;
+      }
+    .mb-45 {
+        margin-bottom: 30px;
+      }
+      .about-exp-main{
+        display: flex;
+        justify-content: space-evenly;
+        width: 90%;
+        position: relative;
+        right: 0;
+        margin: 0 auto;
+        bottom: -20px;
+      }
+      .hub-slider {
+        position: relative;
+        top: -80px;
+        left: 0;
+        width: auto;
+        min-height: 300px;
+      }
+      .about-exp-main .exp-top:first-child::before {
+        content: none;
+      }
+      .about-exp-main .exp-top:first-child{
+        margin-bottom: 0;
+      }
+}
+
+@media only screen and (max-width: 575px) {
 
 }
