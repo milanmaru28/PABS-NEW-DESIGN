@@ -778,6 +778,11 @@ dl.dropdown dt span:nth-child(3) {
 ===========================*/
 .abt-right-sec p {
     margin-bottom: 20px;
+    color: #000000;
+    font-weight: 500;
+}
+.abt-right-sec p:last-child {
+    margin-bottom: 0;
 }
 
 .border-text h1 {
@@ -951,7 +956,7 @@ dl.dropdown dt span:nth-child(3) {
 
 .hub-slider {
     position: absolute;
-    top: -50px;
+    top: -80px;
     left: -35px;
     width: auto;
     min-height: 300px;
@@ -963,18 +968,19 @@ dl.dropdown dt span:nth-child(3) {
 
 .hub-slider a {
     width: 500px;
-    height: 300px;
+    height: 250px;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
     color: #fff;
-    line-height: 300px;
+    /* line-height: 250px; */
     text-align: center;
     position: absolute;
     border-radius: 10px;
     left: 0;
     bottom: 0;
     padding: 0px 0 30px 0;
+    opacity: 1 !important;
 }
 
 .hub-slider a img {
@@ -1022,9 +1028,9 @@ dl.dropdown dt span:nth-child(3) {
     background: #FFF;
     box-shadow: 2px 2px 85px 2px rgba(0, 0, 0, 0.25);
     width: 300px;
-    padding: 30px;
+    padding: 20px 30px;
     position: absolute;
-    bottom: -30px;
+    bottom: -70px;
     right: -30px;
 }
 
@@ -1036,14 +1042,14 @@ dl.dropdown dt span:nth-child(3) {
     color: var(--primary-black);
     font-size: 41px;
     font-weight: 900;
-    margin: 0 0 5px 0;
+    margin: 0 0 1px 0;
 }
 
 .c-detail-txt h5 {
     color: var(--primary-blue);
     font-size: 23px;
     font-weight: 900;
-    margin: 0 0 5px 0;
+    margin: 0 0 2px 0;
 }
 
 .c-detail-txt p {
@@ -1058,7 +1064,7 @@ dl.dropdown dt span:nth-child(3) {
 }
 
 .about-exp-main .exp-top:first-child {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     position: relative;
 }
 
@@ -1079,10 +1085,12 @@ dl.dropdown dt span:nth-child(3) {
 }
 
 .abt-left-sec {
-    background-image: url("../images/aboutus-bg.svg");
+    background-image: url(../images/aboutus-bg.svg);
     background-repeat: no-repeat;
-    height: 620px;
+    height: 530px;
     width: 100%;
+    background-size: cover;
+    border-radius: 10px;
 }
 
 .caps-title h3 {
@@ -1132,13 +1140,13 @@ dl.dropdown dt span:nth-child(3) {
     z-index: 5;
 }
 
-.slick-next {
+/* .slick-next {
     right: 15px;
 }
 
 .slick-prev {
     left: 15px;
-}
+} */
 
 .slick-next:before,
 .slick-prev:before {
@@ -1242,12 +1250,12 @@ dl.dropdown dt span:nth-child(3) {
   .services-slider .slick-prev {
     z-index: 5;
   }
-  .services-slider .slick-next {
+  /* .services-slider .slick-next {
     right: -60px;
-  }
-  .services-slider .slick-prev {
+  } */
+  /* .services-slider .slick-prev {
     left: -60px;
-  }
+  } */
   .services-slider .slick-next:before,
   .services-slider .slick-prev:before {
     content: none;
@@ -1387,6 +1395,9 @@ dl.dropdown dt span:nth-child(3) {
   /*===========================
         07.TESTIMONIAL css 
 ===========================*/
+.testimonial  .container-fluid{
+    width: 1680px;
+}
 
 .testimonial-slide{
     border-radius: 13px;
