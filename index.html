@@ -17,6 +17,11 @@
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+
+
+
     <!--====== Fontawesome Icon CSS ======-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -27,12 +32,13 @@
 
 <body>
 
- <!--====== PRELOADER PART START ======-->
+    <!--====== PRELOADER PART START ======-->
     <!-- <div class="preloader">
     </div> -->
-<!--====== PRELOADER PART ENDS ======-->
+    <!--====== PRELOADER PART ENDS ======-->
 
     <!--====== TOBBAR PART START ======-->
+
     <section class="tobbar-info">
         <div class="container">
             <div class="row align-items-center">
@@ -813,13 +819,62 @@
                             <span class="toggler-icon"></span>
                             <span class="toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
-                            <ul class="navbar-nav">
+                        <div class="collapse navbar-collapse sub-menu-bar main-nav__main-navigation" id="navbarTwo">
+                            <ul class="navbar-nav main-nav__navigation-box">
                                 <li class="nav-item active"><a href="#">About</a></li>
-                                <li class="nav-item"><a href="#">Services</a></li>
-                                <li class="nav-item"><a href="">Products</a></li>
-                                <li class="nav-item"><a href="#">Industries</a></li>
-                                <li class="nav-item"><a href="#">Knowledge Center</a></li>
+                                <li class="dropdown nav-item">
+                                    <a href="#">Services</a>
+                                    <ul class="submenu-link">
+                                        <li>
+                                            <a href="#">Outsourced Accounting Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Outsourced Tax Preparation</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">White Label Services</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown nav-item"><a href="#">Products</a>
+                                    <ul class="submenu-link">
+                                        <li>
+                                            <a href="#">PathQuest AP</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">PathQuest BI</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown nav-item"><a href="#">Industries</a>
+                                    <ul class="submenu-link">
+                                        <li>
+                                            <a href="#">Auto Care</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Restaurant</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Not-for-Profit</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown nav-item"><a href="#">Knowledge Center</a>
+                                    <ul class="submenu-link">
+                                        <li>
+                                            <a href="#">Webinars</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blogs</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">White Papers</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Testimonials</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="nav-item"><a href="#">Downloads</a></li>
                                 <li class="nav-item"><a href="#">Contact Us</a></li>
                             </ul>
@@ -1239,6 +1294,70 @@
     </div>
     <!--====== SOFTWARE AGNOSTICS END ======-->
 
+
+    <!--====== KNOWLEDGE CENTER START ======-->
+    <section class="knowledge-center ptb-100 bg-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="border-text border-text-bg  block-text-title">
+                        <h1>Knowledge Center</h1>
+                        <span>knowledge center</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="knowledgenew-slider mt-50">
+                <div class="swiper newsSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <div class="news-floater">
+                                    <img src="assets/images/webinar-c.png" alt="Webinar">
+                                    <h3 class="swipe-title">Webinar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <div class="news-floater">
+                                    <img src="assets/images/webinar-c.png" alt="Webinar">
+                                    <h3 class="swipe-title">Blog</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <div class="news-floater">
+                                    <img src="assets/images/webinar-c.png" alt="Webinar">
+                                    <h3 class="swipe-title">Testimonial</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <div class="news-floater">
+                                    <img src="assets/images/webinar-c.png" alt="Webinar">
+                                    <h3 class="swipe-title">White paper</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <div class="news-floater">
+                                    <img src="assets/images/webinar-c.png" alt="Webinar">
+                                    <h3 class="swipe-title">Animation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== KNOWLEDGE CENTER END ======-->
+
     <!--====== TESTIMONIAL START ======-->
     <section class="testimonial ptb-100">
         <div class="container">
@@ -1475,6 +1594,7 @@
     <!--====== FOOTER END ======-->
 
 
+
     <!--==================== Jquery js =========================-->
     <script src="assets/js/vendor/jquery-3.2.1.min.js"></script>
 
@@ -1482,14 +1602,21 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
+
     <!--====== Slick js ======-->
     <script src="assets/js/slick.min.js"></script>
+
+
 
     <!-- ===== About Us Slider JS =====  -->
     <script type="text/javascript" src="assets/js/hubslider.js"></script>
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
+
+
 
 
 </body>
