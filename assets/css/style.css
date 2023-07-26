@@ -1731,6 +1731,7 @@ dl.dropdown dt span:nth-child(3) {
     font-size: 18px;
     padding: 12px 10px;
     appearance: none;
+    border: none;
 }
 .custom-select-dropdown {
     position: relative;
