@@ -167,13 +167,31 @@ $(document).ready(function () {
     nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 1201,
         settings: {
           slidesToShow: 3
         }
       },
       {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
         breakpoint: 767,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 640,
         settings: {
           slidesToShow: 1
         }
@@ -248,7 +266,7 @@ $(document).ready(function () {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1.4
+          slidesToShow: 1
         }
       }
     ]

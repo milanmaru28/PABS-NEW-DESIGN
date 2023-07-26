@@ -8,10 +8,18 @@
     .software-para{
         width: 100%;
     }
+    .services-slider .slick-prev{
+      left: -10px;
+    }
+    .services-slider .slick-next {
+      right: -10px;
+    }
 }
 
 @media only screen and (max-width: 1400px) {
-
+    .services-slider .slick-list {
+      padding: 0;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -81,11 +89,7 @@
         padding-right: 30px;
       }
     .navbar-area{
-        top: 8rem;
-        padding: 20px 0 0 0;
-    }
-    .alert-text ul{
-        padding: 0;
+        top: 80px;
     }
     .topbat-contact-detail ul,.topbar-right-area{
         justify-content: center;
@@ -93,9 +97,9 @@
     .c-detail-txt {
         padding-left: 0;
     }
-    .c-detail-img{
-        margin-bottom: 15px;
-    }
+    .c-detail-img {
+        margin-right: 20px;
+      }
     .certificate-main {
         padding-top: 40px;
       }
@@ -124,8 +128,132 @@
       .about-exp-main .exp-top:first-child{
         margin-bottom: 0;
       }
+      .topbat-contact-detail{
+        margin-bottom: 10px;
+      }
+      .banner-content h1 {
+        font-size: 35px;
+        line-height: 49px;
+      }
+      .c-detail-txt h4 {
+        font-size: 30px;
+      }
+      .c-detail-txt h5{
+        font-size: 20px;
+      }
+      .heading-txt {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 21px;
+      }
+      .cirtificte-img ul{
+        column-gap: 20px;
+      }
+      .caps-title h3{
+        font-size: 19px;
+        line-height: 23px;
+      }
+      .c-detail-img img{
+        max-width: 60px;
+      }
+      .ptb-100 {
+        padding: 30px 0;
+          padding-top: 30px;
+          padding-right: 0px;
+          padding-bottom: 30px;
+          padding-left: 0px;
+      }
+      .mt-50 {
+        margin-top: 20px;
+      }
+      .navbar-brand img{
+        max-width: 100px;
+      }
+      .ind-arrow-fix {
+        top: 11%;
+        right: 10px;
+      }
+      .industries-slide h4{
+        font-size: 22px;
+        line-height: 30px;
+      }
+      .industries-slide{
+        padding: 25px;
+      }
 }
 
 @media only screen and (max-width: 575px) {
-
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .topbat-contact-detail ul li a {
+        font-size: 11px;
+      }
+    .custom-search-bar input{
+        width: 180px;
+      }
+    .banner-content h1 {
+        font-size: 20px;
+        line-height: 32px;
+      }
+      .main-banner-section {
+        padding: 110px 0 50px;
+      }
+      .hub-slider a{
+        width: 100%;
+        height: auto;
+      }
+      .abt-slide-txt{
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .hub-slider{
+        top: -170px;
+      }
+      .about-exp-main{
+        display: inline-block;
+        width: 100%;
+      }
+      .about-exp-main .exp-top:first-child {
+        margin-bottom: 20px;
+      }
+      .about-exp-main{
+        bottom: 20px;
+      }
+      .border-text h1 {
+        font-size: 43px;
+        line-height: 58px;
+      }
+      .heading-txt {
+        font-size: 22px;
+        line-height: 30px;
+      }
+      .cirtificte-img ul{
+        display: inline-block;
+        width: 100%;
+      }
+      .cirtificte-img ul li{
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin: 0 0 20px 0px;
+      }
+      .mt-50 {
+        margin-top: 10px;
+      }
+      .border-text span{
+        font-size: 12px;
+        line-height: 14px;
+      }
+      .navbar-area {
+        top: 90px;
+      }
+      .caps-title h3 {
+        font-size: 16px;
+        line-height: 24px;
+      }
 }
