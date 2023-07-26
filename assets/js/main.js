@@ -340,34 +340,44 @@ $(window).on('load', function (event) {
 
 // Lottie button animation 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const btnFloat = document.querySelectorAll(".btn-hero"),
-    body = document.querySelector("body");
-  let isMenuAlreadyOpen = false;
-  if (isMenuAlreadyOpen) {
-    body.classList.remove("menu-open");
-    isMenuAlreadyOpen = false;
-  }
+// document.addEventListener("DOMContentLoaded", function () {
+//   const btnFloat = document.querySelectorAll(".btn-hero"),
+//     body = document.querySelector("body");
+//   let isMenuAlreadyOpen = false;
+//   if (isMenuAlreadyOpen) {
+//     body.classList.remove("menu-open");
+//     isMenuAlreadyOpen = false;
+//   }
 
-  $(window).bind("mousewheel", function (event) {
-    var doc = document.documentElement;
-    let height = screen.height;
-    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    if (event.originalEvent.wheelDelta >= 0) {
-      if (top <= height) {
-        btnFloat.forEach((btn) => btn.removeAttribute("style"));
-        setTimeout(() => {
-          btnFloat.forEach((btn) => btn.classList.remove("float"));
-        }, 100);
-      }
-    } else {
-      if (top) {
-        setTimeout(() => {
-          btnFloat.forEach((btn) => btn.classList.add("float"));
-        }, -10);
-      }
-    }
-  });
+//   $(window).bind("mousewheel", function (event) {
+//     var doc = document.documentElement;
+//     let height = screen.height;
+//     var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+//     if (event.originalEvent.wheelDelta >= 0) {
+//       if (top <= height) {
+//         btnFloat.forEach((btn) => btn.removeAttribute("style"));
+//         setTimeout(() => {
+//           btnFloat.forEach((btn) => btn.classList.remove("float"));
+//         }, 200);
+//       }
+//     } else {
+//       if (top) {
+//         setTimeout(() => {
+//           btnFloat.forEach((btn) => btn.classList.add("float"));
+//         }, 10);
+//       }
+//     }
+//   });
+// });
+
+$(window).scroll(function() {    
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 10) {
+      $(".fixed-ver").addClass("float");
+  } else {
+      $(".fixed-ver").removeClass("float");
+  }
 });
 
 // Phone number Masking
