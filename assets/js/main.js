@@ -2,9 +2,6 @@ $(function () {
 
   "use strict";
 
-  //===== Prealoder
-
-
   //===== Section Menu Active
   $(".sub-menu-bar").on('click', 'li', function () {
     $(".sub-menu-bar li.active").removeClass("active");
@@ -54,46 +51,24 @@ $(function () {
     }
   });
 
-   //===== Animated btn
-   $(function() {  
+  //===== Animated btn
+  $(function () {
     $('.btn-animated')
-      .on('mouseenter', function(e) {
+      .on('mouseenter', function (e) {
         var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-        $(this).find('span').css({top:relY, left:relX})
+          relX = e.pageX - parentOffset.left,
+          relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({ top: relY, left: relX })
       })
-      .on('mouseout', function(e) {
+      .on('mouseout', function (e) {
         var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-        $(this).find('span').css({top:relY, left:relX})
+          relX = e.pageX - parentOffset.left,
+          relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({ top: relY, left: relX })
       });
-    $('[href=#]').click(function(){return false});
+    $('[href=#]').click(function () { return false });
   });
 
-
-
-  //  (function() {
-  //   const buttons = document.querySelectorAll(".btn-animated");
-  
-  //   buttons.forEach(button => {
-  //     ["mouseenter", "mouseout"].forEach(evt => {
-  //       button.addEventListener(evt, e => {
-  //         let parentOffset = button.getBoundingClientRect(),
-  //             relX = e.pageX - parentOffset.left,
-  //             relY = e.pageY - parentOffset.top;
-  
-  //         const span = button.getElementsByTagName("span");
-  
-  //         span[0].style.top = relY + "px";
-  //         span[0].style.left = relX + "px";
-  //       });
-  //     });
-  //   });
-  // })();
-
-  
   //===== Country dropdown 
 
   function setCountry(code) {
@@ -110,7 +85,6 @@ $(function () {
     });
 
     $(".dropdown dd ul li a").click(function () {
-      //console.log($(this).html())
       var text = $(this).html();
       $(".dropdown dt a span").html(text);
       $(".dropdown dd ul").hide();
@@ -118,7 +92,6 @@ $(function () {
     });
 
     function getSelectedValue(id) {
-      //console.log(id,$("#" + id).find("dt a span.value").html())
       return $("#" + id).find("dt a span.value").html();
     }
 
@@ -134,271 +107,180 @@ $(function () {
     });
   });
 
-  // Aboutus section slider JS
+  //===== About us slider
 
   $(function () {
     $('.hub-slider-slides').hubSlider({
-        selector: $('a'),
-        button: {
-            next: $('.hub-slider-arrow_next'),
-            prev: $('.hub-slider-arrow_prev')
-        },
-        transition: '1s',
-        startOffset: 25,
-        auto: true,
-        time: 3 // secondly
+      selector: $('a'),
+      button: {
+        next: $('.hub-slider-arrow_next'),
+        prev: $('.hub-slider-arrow_prev')
+      },
+      transition: '1s',
+      startOffset: 25,
+      auto: true,
+      time: 3 // secondly
     });
-});
-// Aboutus section slider JS END
-
-// Services Slider JS Start
-
-$(document).ready(function () {
-  $(".my-slider").slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    speed: 300,
-    infinite: true,
-    autoplaySpeed: 5000,
-    autoplay: false,
-    prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
-    nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
-    responsive: [
-      {
-        breakpoint: 1600,
-        settings: {
-          slidesToShow: 4
-        }
-      },
-      {
-        breakpoint: 1201,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
   });
-});
-
-// $('.wrapslide').slick({
-//   dots: false,
-//   infinite: true,
-//   speed: 300,
-//   autoplay: true,
-//   autoplaySpeed: 2000,
-//   slidesToShow: 5,
-//   slidesToScroll: 1,
-//   arrows: true,
-//   prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
-//   nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
-//   responsive: [
-//     {
-//       breakpoint: 1024,
-//       settings: {
-//         slidesToShow: 3,
-//         slidesToScroll: 3,
-//         infinite: true,
-//         dots: true
-//       }
-//     },
-//     {
-//       breakpoint: 600,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 2
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1
-//       }
-//     }
-//     // You can unslick at a given breakpoint now by adding:
-//     // settings: "unslick"
-//     // instead of a settings object
-//   ]
-// });
-
-// Services Slider JS End
 
 
-// Industries Slider JS Start
+  //===== Services Slider
 
-$(document).ready(function () {
-  $("#ind-slider-right").slick({
-    slidesToShow: 2.6,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false,
-    speed: 300,
-    infinite: false,
-    autoplaySpeed: 5000,
-    autoplay: false,
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2.4
+  $(document).ready(function () {
+    $(".my-slider").slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      speed: 300,
+      infinite: true,
+      autoplaySpeed: 5000,
+      autoplay: false,
+      prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
+      nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
+      responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 1201,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1
+          }
         }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
+      ]
+    });
   });
-});
 
-$('#icon-left').click(function () {
-  $('#ind-slider-right').slick('slickPrev');
-});
-$('#icon-right').click(function () {
+
+  //===== Industries Slider
+
+  $(document).ready(function () {
+    $("#ind-slider-right").slick({
+      slidesToShow: 2.6,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      speed: 300,
+      infinite: false,
+      autoplaySpeed: 5000,
+      autoplay: false,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2.4
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
+
+  $('#icon-left').click(function () {
+    $('#ind-slider-right').slick('slickPrev');
+  });
+  $('#icon-right').click(function () {
     $('#ind-slider-right').slick('slickNext');
-});
-
-// Industries Slider JS End
-
-
-
-// Testimonial Slider JS Start
-
-$(document).ready(function () {
-  $(".video-testimonial-slider").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: true,
-    speed: 300,
-    infinite: true,
-    autoplaySpeed: 5000,
-    autoplay: false,
-    prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
-    nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
   });
-});
 
-// Testimonial Slider JS End
+  //===== Testimonial Slider
 
-
-// knowledge center Slider JS Start
-
-$(document).ready(function () {
-  var mySwiper = new Swiper(".newsSlider", {
-    slidesPerView: "auto",
-    spaceBetween: 15,
-    grabCursor: true,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    on: {
-      click(event) {
-          console.log('event.target',this.clickedIndex);
-          mySwiper.slideTo(this.clickedIndex);	
-      },
-    },
+  $(document).ready(function () {
+    $(".video-testimonial-slider").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      speed: 300,
+      infinite: true,
+      autoplaySpeed: 5000,
+      autoplay: false,
+      prevArrow: '<div class="slick-prev slick-arrow"><img src="assets/images/left-arrow.svg"></div>',
+      nextArrow: '<div class="slick-next slick-arrow"><img src="assets/images/right-arow.svg"></div>',
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
   });
+
+  //===== knowledge center Slider
+
+  $(document).ready(function () {
+    var mySwiper = new Swiper(".newsSlider", {
+      slidesPerView: "auto",
+      spaceBetween: 15,
+      grabCursor: true,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      on: {
+        click(event) {
+          console.log('event.target', this.clickedIndex);
+          mySwiper.slideTo(this.clickedIndex);
+        },
+      },
+    });
+  });
+
+
 });
 
-// knowledge center Slider JS End
-
-
-//===== Prealoder==========//
-$(window).on('load', function (event) {
-  $('.preloader').delay(500).fadeOut(500);
-});
-//===== Prealoder==========//
-
-
-
-});
-
-// Lottie button animation 
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const btnFloat = document.querySelectorAll(".btn-hero"),
-//     body = document.querySelector("body");
-//   let isMenuAlreadyOpen = false;
-//   if (isMenuAlreadyOpen) {
-//     body.classList.remove("menu-open");
-//     isMenuAlreadyOpen = false;
-//   }
-
-//   $(window).bind("mousewheel", function (event) {
-//     var doc = document.documentElement;
-//     let height = screen.height;
-//     var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-//     if (event.originalEvent.wheelDelta >= 0) {
-//       if (top <= height) {
-//         btnFloat.forEach((btn) => btn.removeAttribute("style"));
-//         setTimeout(() => {
-//           btnFloat.forEach((btn) => btn.classList.remove("float"));
-//         }, 200);
-//       }
-//     } else {
-//       if (top) {
-//         setTimeout(() => {
-//           btnFloat.forEach((btn) => btn.classList.add("float"));
-//         }, 10);
-//       }
-//     }
-//   });
-// });
-
-$(window).scroll(function() {    
+ //===== Fixed animated btn
+$(window).scroll(function () {
   var scroll = $(window).scrollTop();
 
   if (scroll >= 10) {
-      $(".fixed-ver").addClass("float");
+    $(".fixed-ver").addClass("float");
   } else {
-      $(".fixed-ver").removeClass("float");
+    $(".fixed-ver").removeClass("float");
   }
 });
 
-// Phone number Masking
+//===== Phone number masking
 
 function preventNonNumericalInput(e) {
   e = e || window.event;
@@ -407,6 +289,12 @@ function preventNonNumericalInput(e) {
 
   if (!charStr.match(/^[0-9]+$/)) e.preventDefault();
 }
+
+//===== Prealoder
+const loader = document.querySelector('.loader')
+setTimeout(() => {
+  loader.classList.add('hide')
+}, 2000)
 
 
 

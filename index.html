@@ -6,7 +6,7 @@
 
     <!--====== Title ======-->
     <title>PABS</title>
-    <!-- <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png"> -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/pabs-favicon.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,8 +18,6 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
     <!--====== Animation button CSS ======-->
-    <!-- <link rel="stylesheet" href="assets/css/odama-v2.css"> -->
-    <!-- <link rel="stylesheet" href="assets/css/custom.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 
     <!--====== Fontawesome Icon CSS ======-->
@@ -34,8 +32,11 @@
 <body>
 
     <!--====== PRELOADER PART START ======-->
-    <!-- <div class="preloader">
-    </div> -->
+    <div class="loader">
+        <div class="ball"></div>
+        <div class="ball2"></div>
+        <div class="ball3"></div>
+    </div>
     <!--====== PRELOADER PART ENDS ======-->
 
     <!--====== TOBBAR PART START ======-->
@@ -72,20 +73,19 @@
                         <div class="custom-country-dropdown">
                             <div class="wrapper">
                                 <dl id="country-select" class="dropdown">
-                                    <dt><a href="javascript:void(0);"><span><span
-                                                    style="background-position:0px -1694px"></span><span>India</span><span>+91</span>
-                                                <img src="assets/images/circle-arrow-down.svg" alt="circle-down"></span>
+                                    <dt><a href="javascript:void(0);"><span>
+                                        <span style="background-position:0px -1694px"></span><span>India</span><span>+91</span>
+                                                </span>
+                                                <img src="assets/images/circle-arrow-down.svg" alt="circle-down">
                                         </a></dt>
                                     <dd>
                                         <ul style="display: none;">
                                             <li><a cunt_code="+91" href="javascript:void(0);"><span
                                                         style="background-position:0px -1694px"></span><span>India</span><span>+91</span></a>
                                             </li>
-                                            <li><a cunt_code="" href="javascript:void(0);"><span
-                                                        style="background-position:0px -1694px"></span><span>India-Tollfree</span><span></span></a>
-                                            </li>
                                             <li><a cunt_code="+1" href="javascript:void(0);"><span
-                                                        style="background-position:0px -44px"></span><span>USA</span><span>+1</span></a></li>
+                                                        style="background-position:0px -44px"></span><span>USA</span><span>+1</span></a>
+                                            </li>
                                             <li><a cunt_code="+93" href="javascript:void(0);"><span
                                                         style="background-position:0px -2311px"></span><span>Afghanistan</span><span>+93</span></a>
                                             </li>
@@ -334,8 +334,6 @@
                 <div class="col-xl-12 col-xl-12">
                     <div class="banner-content">
                         <h1>Revolutionize Your Business for Operational Excellence</h1>
-                        <!-- <a class="btn-animated" href="#"><b>Let's Talk</b><span></span>
-                        </a> -->
                         <a href="#" class="btn-lottie btn-hero fixed-ver">
                             <h5 class="btn-text float-btn-text btn-animated"><b>Let's Talk</b><span></span></h5>
                             <div class="msg-icon-hero">
@@ -344,14 +342,6 @@
                             </div>
                         </a>
                     </div>
-                    <!-- <a href="#" class="btn btn-hero fixed-ver">
-                        <h5 class="btn-text float-btn-text txt-black">LET’S TALK</h5>
-                        <div class="msg-icon-hero w-embed lott-btn">
-                            <lottie-player src="/assets/lottie/inbox.json" speed="2">
-                            </lottie-player>
-                        </div>
-                    </a> -->
-
                 </div>
             </div>
         </div>
@@ -385,27 +375,26 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="abt-left-sec position-relative">
-                        <!-- <img src="assets/images/aboutus-bg.svg" alt="img" class="abt-bg-img"> -->
                         <div class="hub-slider">
                             <div class="hub-slider-slides">
                                 <a href="#">
-                                    <img src="./assets/images/slide-1.png" / alt="img">
+                                    <img src="./assets/images/slide-1.png" alt="img">
                                     <h4 class="abt-slide-txt">Tax Season Is Coming, and These Firms Can’t Find Enough
                                         Accountants in the U.S.</h4>
                                 </a>
                                 <a href="#">
-                                    <img src="./assets/images/slide-2.png" / alt="img">
+                                    <img src="./assets/images/slide-2.png" alt="img">
                                     <h4 class="abt-slide-txt">Tax Season, and These Firms Can’t Find Enough Accountants
                                         in
                                         the U.S.</h4>
                                 </a>
                                 <a href="#">
-                                    <img src="./assets/images/slide-3.png" / alt="img">
+                                    <img src="./assets/images/slide-3.png" alt="img">
                                     <h4 class="abt-slide-txt">Tax Season Is Coming,vgt Find Enough Accountants in
                                         the U.S.</h4>
                                 </a>
                                 <a href="#">
-                                    <img src="./assets/images/slide-4.png" / alt="img">
+                                    <img src="./assets/images/slide-4.png" alt="img">
                                     <h4 class="abt-slide-txt">Tax Season Is Coming, and Thes the U.S.</h4>
                                 </a>
                             </div>
@@ -503,12 +492,15 @@
                     </div>
                     <div class="service-slide">
                         <h4>Outsourced Bookkeeping Services for Accounting Firms</h4>
-                        <p>We help you build an all-in-one client centric accounting firm that’s more aligned towards the changing business needs and ensures a longer retention of the client relationship.</p>
+                        <p>We help you build an all-in-one client centric accounting firm that’s more aligned towards
+                            the changing business needs and ensures a longer retention of the client relationship.</p>
                         <a href="#" class="btn-animated hover-bg-white">Read More<span></span></a>
                     </div>
                     <div class="service-slide">
                         <h4>Bookkeeping Services for Small Medium Businesses</h4>
-                        <p>We enable you to redirect your focus back to providing higher value services to your clients. No hiring or training hassles, no cost of infrastructure, while still delivering expert services.</p>
+                        <p>We enable you to redirect your focus back to providing higher value services to your clients.
+                            No hiring or training hassles, no cost of infrastructure, while still delivering expert
+                            services.</p>
                         <a href="#" class="btn-animated hover-bg-white">Read More<span></span></a>
                     </div>
                     <div class="service-slide">
@@ -518,7 +510,8 @@
                     </div>
                     <div class="service-slide">
                         <h4>Outsourced Accounting Services</h4>
-                        <p>Untying your human and financial resources to refocus on business expansion and more billing.</p>
+                        <p>Untying your human and financial resources to refocus on business expansion and more billing.
+                        </p>
                         <a href="#" class="btn-animated hover-bg-white">Read More<span></span></a>
                     </div>
                     <div class="service-slide">
@@ -528,12 +521,15 @@
                     </div>
                     <div class="service-slide">
                         <h4>Outsourced Bookkeeping Services for Accounting Firms</h4>
-                        <p>We help you build an all-in-one client centric accounting firm that’s more aligned towards the changing business needs and ensures a longer retention of the client relationship.</p>
+                        <p>We help you build an all-in-one client centric accounting firm that’s more aligned towards
+                            the changing business needs and ensures a longer retention of the client relationship.</p>
                         <a href="#" class="btn-animated hover-bg-white">Read More<span></span></a>
                     </div>
                     <div class="service-slide">
                         <h4>Bookkeeping Services for Small Medium Businesses</h4>
-                        <p>We enable you to redirect your focus back to providing higher value services to your clients. No hiring or training hassles, no cost of infrastructure, while still delivering expert services.</p>
+                        <p>We enable you to redirect your focus back to providing higher value services to your clients.
+                            No hiring or training hassles, no cost of infrastructure, while still delivering expert
+                            services.</p>
                         <a href="#" class="btn-animated hover-bg-white">Read More<span></span></a>
                     </div>
                     <div class="service-slide">
@@ -543,10 +539,11 @@
                     </div>
                     <div class="service-slide">
                         <h4>Outsourced Accounting Services</h4>
-                        <p>Untying your human and financial resources to refocus on business expansion and more billing.</p>
+                        <p>Untying your human and financial resources to refocus on business expansion and more billing.
+                        </p>
                         <a href="#" class="btn-animated hover-bg-white">Read More<span></span></a>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -785,7 +782,7 @@
                 <div class="col-md-12 text-center">
                     <div class="border-text border-text-bg  block-text-title">
                         <h1>Knowledge Center</h1>
-                        <span>knowledge center</span>
+                        <span class="text-blue">knowledge center</span>
                     </div>
                 </div>
             </div>
@@ -981,12 +978,14 @@
                                             <option>Goa</option>
                                             <option>Delhi</option>
                                         </select>
-                                        <img src="assets/images/down-arrow.svg" alt="circle-down"></span>
+                                        <img src="assets/images/down-arrow.svg" alt="circle-down">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Number*" pattern="[1-9]{1}[0-9]{9}" maxlength="10" onkeypress="preventNonNumericalInput(event)">
+                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Number*"
+                                    pattern="[1-9]{1}[0-9]{9}" maxlength="10"
+                                    onkeypress="preventNonNumericalInput(event)">
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" placeholder="Email*">
@@ -996,13 +995,11 @@
                             </div>
                             <button type="submit" class="btn-animated submit-btn"><b>Get In
                                     Touch</b><span></span></button>
-
-                            <!-- <a class="btn-animated" href="#"><b>Let's Talk</b><span></span></a> -->
                         </form>
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 globe">
-                    <iframe class="custom-iframe"  src="map.html" width="600" height="700"  frameborder="0" ></iframe>
+                    <iframe class="custom-iframe" src="map.html" width="600" height="700" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -1128,12 +1125,7 @@
     </footer>
     <!--====== FOOTER END ======-->
 
-
-    <script>
-        //input type number in contactform
-       
-      </script>
-    <!--==================== Jquery js =========================-->
+    <!--====== Jquery js ======-->
     <script src="assets/js/vendor/jquery-3.2.1.min.js"></script>
 
     <!--====== Bootstrap js ======-->
@@ -1146,19 +1138,12 @@
     <!--====== Slick js ======-->
     <script src="assets/js/slick.min.js"></script>
 
-
-
     <!-- ===== About Us Slider JS =====  -->
     <script type="text/javascript" src="assets/js/hubslider.js"></script>
 
-
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
-
+    <script src="assets/js/lottie-player.js"></script>
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
-
-
-
 
 </body>
 
