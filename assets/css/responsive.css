@@ -40,6 +40,10 @@
   .testimonial-slider .slick-next {
     right: -30px;
   }
+  .banner-content h1{
+    font-size: 70px;
+    line-height: 85px;
+}
 }
 
 @media only screen and (max-width: 1200px) {
@@ -98,6 +102,9 @@
       left: 0;
       width: 500px;
       height: 550px;
+    }
+    .btn-hero{
+      bottom: calc(100vh - 32rem);
     }
 }
 
@@ -200,6 +207,9 @@
     .newsSlider .swiper-slide.swiper-slide-active {
       width: 60%;
     }
+    .btn-hero {
+      bottom: calc(100vh - 27rem);
+    }
     
     
 }
@@ -254,8 +264,8 @@
         margin-bottom: 10px;
       }
       .banner-content h1 {
-        font-size: 35px;
-        line-height: 49px;
+        font-size: 33px;
+        line-height: 47px;
       }
       .c-detail-txt h4 {
         font-size: 30px;
@@ -366,7 +376,7 @@
       .top-footer {
         padding: 30px;
       }
-      .contact-form .form-control{
+      .contact-form .form-control,.custom-select-dropdown select,.contact-country dl.dropdown dt span:nth-child(2){
         font-size: 15px;
       }
       .newsSlider .swiper-slide,.newsSlider .swiper-slide.swiper-slide-active {
@@ -382,6 +392,16 @@
     }
     .industries-slide{
       margin: 0 5px;
+    }
+    .btn-hero {
+      bottom: calc(100vh - 27rem);
+    }
+    .btn-lottie.btn-hero.fixed-ver.float{
+      padding: 13px;
+    }
+    .loader .ball,.loader .ball2,.loader .ball3{
+      width: 20px;
+      height: 20px;
     }
 }
 
@@ -412,7 +432,7 @@
         line-height: 22px;
       }
       .hub-slider{
-        top: -170px;
+        top: -60px;
       }
       .about-exp-main{
         display: inline-block;
@@ -422,11 +442,11 @@
         margin-bottom: 20px;
       }
       .about-exp-main{
-        bottom: 20px;
+        bottom: 0;
       }
       .border-text h1,.common-title-area h2 {
-        font-size: 43px;
-        line-height: 58px;
+        font-size: 50px;
+        line-height: 60px;
       }
       .heading-txt {
         font-size: 22px;
@@ -528,6 +548,9 @@
       .newsSlider .swiper-slide .news-item{
         margin-bottom: 40px;
       }
+      .btn-hero {
+        bottom: calc(100vh - 23rem);
+      }
      
 }
 
@@ -539,8 +562,8 @@
     padding: 10px;
   }
   .border-text h1, .common-title-area h2 {
-    font-size: 29px;
-    line-height: 44px;
+    font-size: 35px;
+    line-height: 50px;
   }
   .border-text span{
     font-size: 11px;

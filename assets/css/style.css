@@ -447,7 +447,7 @@ dl.dropdown dt span:nth-child(3) {
     background: #FFD20D;
     margin-right: 5px;
     position: absolute;
-    z-index: 99;
+    z-index: 1;
 }
 
 .alert-text ul {
@@ -901,7 +901,7 @@ dl.dropdown dt span:nth-child(3) {
 }
 
 .btn-lottie.btn-hero.fixed-ver {
-    z-index: 99;
+    z-index: 1;
     padding: 1.25em 3.25em;
     position: fixed
 }
@@ -1683,7 +1683,7 @@ dl.dropdown dt span:nth-child(3) {
 }
 .contact-form .form-control {
     border-radius: 5px;
-    padding: 0.7rem 1rem;
+    padding: 13px 15px;
     height: auto;
     color: #000000;
     font-size: 18px;
@@ -1729,9 +1729,10 @@ dl.dropdown dt span:nth-child(3) {
     width: 100%;
     border-radius: 5px;
     font-size: 18px;
-    padding: 12px 10px;
+    padding: 12px 15px;
     appearance: none;
     border: none;
+    background-color: #fff;
 }
 .custom-select-dropdown {
     position: relative;
@@ -2018,3 +2019,6 @@ dl.dropdown dt span:nth-child(3) {
 
 
 
+.outsource-section{
+    padding: 0 30px;
+}
