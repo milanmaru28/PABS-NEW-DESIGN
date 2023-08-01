@@ -82,6 +82,7 @@ $(function () {
     $(".dropdown img.flag").addClass("flagvisibility");
 
     $(".dropdown dt a").click(function () {
+      $(".dropdown").toggleClass("arrow-reverse");
       $(".dropdown dd ul").toggle();
     });
 
@@ -108,6 +109,13 @@ $(function () {
     });
   });
 
+
+  // State Dropdown JS
+
+  $(".custom-select-dropdown").click(function () {
+    $(".custom-select-dropdown").toggleClass("arrow-reverse-state");
+  });
+  
   //===== About us slider
 
   $(function () {
@@ -143,7 +151,7 @@ $(document).ready(function () {
       {
         breakpoint: 1600,
         settings: {
-          slidesToShow: 4
+          slidesToShow: 3
         }
       },
       {
@@ -183,7 +191,7 @@ $(document).ready(function () {
       {
         breakpoint: 1400,
         settings: {
-          slidesToShow: 2.5
+          slidesToShow: 3.1
         }
       },
       {
@@ -263,16 +271,16 @@ $(document).ready(function () {
         delay: 3000,
         disableOnInteraction: false,
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
       on: {
         click(event) {
           console.log('event.target', this.clickedIndex);
           mySwiper.slideTo(this.clickedIndex);
         },
       },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      }
     });
   });
 
@@ -305,3 +313,11 @@ const loader = document.querySelector('.loader')
 setTimeout(() => {
   loader.classList.add('hide')
 }, 2000)
+
+
+// Dropdown add class
+
+function myFunction() {
+  var element = document.getElementById("country-select");
+  element.classList.add("down-rotate");
+}

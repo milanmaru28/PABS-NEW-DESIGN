@@ -349,6 +349,10 @@ li a {
 
 li a span:nth-child(2) {
     line-height: 2em;
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .dropdown dd ul::-webkit-scrollbar-track {
@@ -371,10 +375,11 @@ li a span:nth-child(2) {
 
 .dropdown dd ul li a {
     padding: 5px;
-    display: block;
+    display: flex;
     font-size: 12px !important;
     color: var(--primary-black);
     font-weight: 500;
+    align-items: center;
 }
 
 .dropdown dd ul li a:hover {
@@ -384,8 +389,11 @@ li a span:nth-child(2) {
 dl.dropdown {
     width: auto;
     margin: 0;
+    transition: all ease 0.5s;
 }
-
+dl.dropdown.arrow-reverse dt a img,.arrow-reverse-state img{
+    transform: rotate(180deg);
+}
 dl.dropdown span:nth-child(3) {
     color: var(--primary-black);
 }
@@ -615,7 +623,7 @@ dl.dropdown dt span:nth-child(3) {
 
     .navbar-area .navbar .navbar-nav .nav-item.active>a,
     .navbar-area .navbar .navbar-nav .nav-item:hover>a {
-        color: #121212;
+        color: var(--priamary-yellow);
     }
 }
 
@@ -623,7 +631,7 @@ dl.dropdown dt span:nth-child(3) {
 
     .navbar-area .navbar .navbar-nav .nav-item.active>a,
     .navbar-area .navbar .navbar-nav .nav-item:hover>a {
-        color: #121212;
+        color: var(--priamary-yellow);
     }
 }
 
@@ -901,7 +909,7 @@ dl.dropdown dt span:nth-child(3) {
 }
 
 .btn-lottie.btn-hero.fixed-ver {
-    z-index: 1;
+    z-index: 99;
     padding: 1.25em 3.25em;
     position: fixed
 }
@@ -910,7 +918,7 @@ dl.dropdown dt span:nth-child(3) {
     opacity: 1;
     padding: 1.5em;
     display: block;
-    top: auto
+    top: auto;
 }
 
 .btn-lottie.btn-hero.fixed-ver.modal-btn.float {
@@ -1083,10 +1091,10 @@ dl.dropdown dt span:nth-child(3) {
     z-index: 5;
   }
   .services-slider .slick-next {
-    right: -50px;
+    right: -60px;
   } 
    .services-slider .slick-prev {
-    left: -50px;
+    left: -60px;
   }
   .services-slider .slick-next:before,
   .services-slider .slick-prev:before {
@@ -1692,7 +1700,9 @@ dl.dropdown dt span:nth-child(3) {
 .contact-form .form-group {
     margin-bottom: 1.25rem;
 }
+
 /* Custom placeholder color */
+
 .contact-form .form-control::-ms-input-placeholder{
     color: #000000;
 }
@@ -1733,6 +1743,10 @@ dl.dropdown dt span:nth-child(3) {
     appearance: none;
     border: none;
     background-color: #fff;
+}
+.custom-select-dropdown select:focus,
+.custom-select-dropdown select:focus-within{
+    outline: none;
 }
 .custom-select-dropdown {
     position: relative;
@@ -1994,7 +2008,7 @@ dl.dropdown dt span:nth-child(3) {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999;
+    z-index: 999999999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2017,8 +2031,44 @@ dl.dropdown dt span:nth-child(3) {
     display: none;
   }
 
-
-
 .outsource-section{
     padding: 0 30px;
 }
+
+/* 
+Place holder star color css */
+
+.textfield {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.textfield__label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: block;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000;
+    user-select: none;
+    cursor: text;
+    transform: translateY(-50%);
+}
+.textfield__label::after {
+    position: relative;
+    top: -3px;
+    left: 1px;
+    content: "*";
+    color: #f00;
+}
+.textfield__input::placeholder {
+    color: transparent;
+}
+.textfield__input:focus + .textfield__label, .textfield__input:valid + .textfield__label, .textfield__input:disabled + .textfield__label {
+    display: none;
+}
+/* 
+Place holder star color css */

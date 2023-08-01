@@ -806,7 +806,7 @@
                         <div class="swiper-slide">
                             <div class="news-item">
                                 <div class="news-floater">
-                                    <img src="assets/images/webinar-c1.png" alt="Webinar">
+                                    <img src="assets/images/webinar-c.png" alt="Webinar">
                                     <h3 class="swipe-title">Blog</span>
                                 </div>
                             </div>
@@ -815,7 +815,7 @@
                             <div class="news-item">
                                 <div class="news-floater">
                                     <img src="assets/images/webinar-c.png" alt="Webinar">
-                                    <h3 class="swipe-title">News & Event</span>
+                                    <h3 class="swipe-title">News & Events</span>
                                 </div>
                             </div>
                         </div>
@@ -932,11 +932,13 @@
                 <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
                     <div class="contact-form">
                         <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="name" placeholder="Full Name*" required>
+                            <div class="form-group textfield">
+                                <input type="text" class="form-control textfield__input" id="name" required>
+                                <label for="name" class="textfield__label">Full Name</label>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="company-name" placeholder="Company Name*">
+                            <div class="form-group textfield">
+                                <input type="text" class="form-control textfield__input" id="company-name" required>
+                                <label for="company-name" class="textfield__label">Company Name</label>
                             </div>
                             <div class="form-group row">
                                 <div class="col-lg-6 col-md-12 col-sm-12">
@@ -945,10 +947,11 @@
                                             <dl id="country-select" class="dropdown">
                                                 <dt><a href="javascript:void(0);"><span><span
                                                                 style="background-position:0px -1694px"></span><span>India</span><span>+91</span>
-                                                            <img src="assets/images/down-arrow.svg"
-                                                                alt="circle-down"></span>
-
-                                                    </a></dt>
+                                                           </span>
+                                                           <img src="assets/images/down-arrow.svg"
+                                                           alt="circle-down">
+                                                    </a>
+                                                </dt>
                                                 <dd>
                                                     <ul style="display: none;">
                                                         <li><a cunt_code="+91" href="javascript:void(0);"><span
@@ -978,7 +981,7 @@
                                 <div class="col-lg-6 col-md-12 col-sm-12">
                                     <div class="custom-select-dropdown">
                                         <select>
-                                            <option>State*</option>
+                                            <option>State</option>
                                             <option>Gujarat</option>
                                             <option>Goa</option>
                                             <option>Delhi</option>
@@ -987,19 +990,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Number*"
-                                    pattern="[1-9]{1}[0-9]{9}" maxlength="10"
-                                    onkeypress="preventNonNumericalInput(event)">
+                            <div class="form-group textfield">
+                                <input type="text" class="form-control textfield__input" name="phone" id="phone" pattern="[1-9]{1}[0-9]{9}" maxlength="10"
+                                    onkeypress="preventNonNumericalInput(event)" required>
+                                    <label for="phone" class="textfield__label">Phone</label>
                             </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email" placeholder="Email*">
+                            <div class="form-group textfield">
+                                <input type="email" class="form-control textfield__input" id="email" required>
+                                <label for="email" class="textfield__label">Email</label>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
                             </div>
-                            <button type="submit" class="btn-animated submit-btn"><b>Get In
-                                    Touch</b><span></span></button>
+                            <button type="submit" class="btn-animated submit-btn"><b>Get In Touch</b><span></span>
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -1082,7 +1086,6 @@
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">License Agreement</a></li>
-
                         </ul>
                     </div>
                 </div>
