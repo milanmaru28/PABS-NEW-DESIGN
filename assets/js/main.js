@@ -189,15 +189,15 @@ $(document).ready(function () {
     autoplay: false,
     responsive: [
       {
-        breakpoint: 1400,
+        breakpoint: 1450,
         settings: {
-          slidesToShow: 3.1
+          slidesToShow: 3.2
         }
       },
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 2.3
+          slidesToShow: 3.3
         }
       },
       {
@@ -264,7 +264,7 @@ $(document).ready(function () {
   $(document).ready(function () {
     var mySwiper = new Swiper(".newsSlider", {
       slidesPerView: "auto",
-      spaceBetween: 15,
+      spaceBetween: 25,
       grabCursor: true,
       loop: true,
       autoplay: {

@@ -1307,7 +1307,7 @@ dl.dropdown dt span:nth-child(3) {
     line-height: 150px;
     text-align: center;
     margin-bottom: 1rem;
-    animation: logoEffect 4s infinite linear;
+    animation: logoEffect 15s linear infinite;
 }
 
 .client-grid li:last-child {
@@ -1316,21 +1316,21 @@ dl.dropdown dt span:nth-child(3) {
 
 @keyframes logoEffect {
     0% {
-        transform: translateY(0%)
+        transform: translateY(0%);
     }
 
     100% {
-        transform: translateY(-50%)
+        transform: translateY(calc(-100% - 100px));
     }
 }
 
 .topanimate-grid li {
-    animation: logoEffecttop 4s infinite linear;
+    animation: logoEffecttop 15s linear infinite;
 }
 
 @keyframes logoEffecttop {
     0% {
-        transform: translateY(-50%)
+        transform: translateY(calc(-100% - 100px));
     }
 
     100% {
@@ -1544,8 +1544,9 @@ dl.dropdown dt span:nth-child(3) {
 .news-floater{
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    width: 550px;
+    /* border-radius: 10px; */
+    border-radius: 10px 15px 15px 10px;
+    /* width: 550px; */
     height: 340px;
 }
 .news-floater::before{
