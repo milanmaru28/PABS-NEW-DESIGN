@@ -82,7 +82,7 @@ $(function () {
     $(".dropdown img.flag").addClass("flagvisibility");
 
     $(".dropdown dt a").click(function () {
-      $(".dropdown").toggleClass("arrow-reverse");
+      // $(".dropdown").toggleClass("arrow-reverse");
       $(".dropdown dd ul").toggle();
     });
 
@@ -112,9 +112,9 @@ $(function () {
 
   // State Dropdown JS
 
-  $(".custom-select-dropdown").click(function () {
-    $(".custom-select-dropdown").toggleClass("arrow-reverse-state");
-  });
+  // $(".custom-select-dropdown").click(function () {
+  //   $(".custom-select-dropdown").toggleClass("arrow-reverse-state");
+  // });
   
   //===== About us slider
 
@@ -317,7 +317,7 @@ setTimeout(() => {
 
 // Dropdown add class
 
-function myFunction() {
-  var element = document.getElementById("country-select");
-  element.classList.add("down-rotate");
-}
+// function myFunction() {
+//   var element = document.getElementById("country-select");
+//   element.classList.add("down-rotate");
+// }
