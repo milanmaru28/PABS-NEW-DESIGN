@@ -338,7 +338,7 @@ p {
     max-height: 220px;
     overflow-y: scroll;
     top: 10px;
-    z-index: 99;
+    z-index: 999999999;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
 }
@@ -909,7 +909,7 @@ dl.dropdown dt span:nth-child(3) {
 }
 
 .btn-lottie.btn-hero.fixed-ver {
-    z-index: 99;
+    z-index: 9;
     padding: 1.25em 3.25em;
     position: fixed
 }
@@ -2073,3 +2073,4 @@ Place holder star color css */
 }
 /* 
 Place holder star color css */
+

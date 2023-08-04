@@ -416,7 +416,7 @@
       margin: 0 5px;
     }
     .btn-hero {
-      bottom: calc(100vh - 28rem);
+      bottom: calc(100vh - 27rem);
     }
     .btn-lottie.btn-hero.fixed-ver.float{
       padding: 13px;
@@ -464,6 +464,22 @@
   100% {
       transform: translateY(0%)
   }
+}
+
+.slick-dots li button::before {
+  font-size: 58px;
+}
+.services-slider .slick-dots li.slick-active button::before {
+  opacity: 1;
+  color: #0078C8;
+}
+.services-slider .slick-dots li button::before {
+  opacity: 1;
+  color: #fff;
+}
+
+.slick-dots li{
+  margin: 0 3px;
 }
 }
 
