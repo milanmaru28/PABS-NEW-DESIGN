@@ -210,7 +210,7 @@
       width: 60%;
     }
     .btn-hero {
-      bottom: calc(100vh - 27rem);
+      bottom: calc(100vh - 29rem);
     }
     .navbar-area .navbar .navbar-nav .nav-item a{
       padding: 10px;
@@ -218,8 +218,6 @@
     .navbar-area .navbar .navbar-nav .nav-item {
       margin: 0 20px;
      }
-    
-    
 }
 
 @media only screen and (max-width: 767px) {
@@ -407,7 +405,7 @@
       margin: 0 5px;
     }
     .btn-hero {
-      bottom: calc(100vh - 27rem);
+      bottom: calc(100vh - 28rem);
     }
     .btn-lottie.btn-hero.fixed-ver.float{
       padding: 13px;
@@ -576,6 +574,10 @@
       }
       .newsSlider .swiper-slide .news-item{
         margin-bottom: 40px;
+      }
+      .dropdown dd ul{
+        left: inherit;
+        right: 0;
       }
       /* .btn-hero {
         bottom: calc(100vh - 23rem);
