@@ -260,7 +260,9 @@ $(document).ready(function () {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
         }
       }
     ]
@@ -275,6 +277,8 @@ $(document).ready(function () {
       spaceBetween: 25,
       grabCursor: true,
       loop: true,
+      observer: true,
+      observeParents: true,
       autoplay: {
         delay: 30000,
         disableOnInteraction: false,
