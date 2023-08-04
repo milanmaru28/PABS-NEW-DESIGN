@@ -155,6 +155,12 @@ $(document).ready(function () {
         }
       },
       {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
         breakpoint: 1201,
         settings: {
           slidesToShow: 3
