@@ -45,6 +45,17 @@
     font-size: 28px;
     line-height: 37px;
   }
+  .service-slide{
+    padding: 20px 20px 30px 20px;
+  }
+  .service-slide h4{
+    font-size: 19px;
+    margin-bottom: 12px;
+    line-height: 25px;
+  }
+  .service-slide p{
+    font-size: 15px;
+  }
   
 }
 
@@ -429,6 +440,31 @@
   .services-slider .slick-next {
     right: -10px;
   }
+  .client-grid li{
+    animation: logoEffect 8s linear infinite;
+  }
+  @keyframes logoEffect {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+            transform: translateY(calc(-50% - 0px));
+    }
+ }
+ .topanimate-grid li {
+  animation: logoEffecttop 8s linear infinite;
+}
+
+@keyframes logoEffecttop {
+  0% {
+    transform: translateY(calc(-50% - 0px));
+  }
+
+  100% {
+      transform: translateY(0%)
+  }
+}
 }
 
 @media only screen and (max-width: 575px) {
