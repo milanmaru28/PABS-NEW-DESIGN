@@ -67,7 +67,7 @@ $(function () {
           relY = e.pageY - parentOffset.top;
         $(this).find('span').css({ top: relY, left: relX })
       });
-    $('[href=#]').click(function () { return false });
+    $('[href*=\\#]').click(function () { return false });
   });
 
   //===== Country dropdown 
@@ -175,7 +175,9 @@ $(document).ready(function () {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
         }
       }
     ]
@@ -274,7 +276,7 @@ $(document).ready(function () {
       grabCursor: true,
       loop: true,
       autoplay: {
-        delay: 3000,
+        delay: 30000,
         disableOnInteraction: false,
       },
       on: {
