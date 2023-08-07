@@ -1565,7 +1565,7 @@ dl.dropdown dt span:nth-child(3) {
     object-fit: cover;
 }
 .newsSlider .swiper-slide.swiper-slide-active {
-    width: 50%;
+    width: 50% !important;
 }
 .newsSlider .swiper-slide.swiper-slide-active .news-item {
     width: 100%;

@@ -401,8 +401,8 @@
       {
         font-size: 15px;
       }
-      .newsSlider .swiper-slide,.newsSlider .swiper-slide.swiper-slide-active {
-        width: 100%;
+     .newsSlider .swiper-slide.swiper-slide-active {
+        width: 50% !important;
       }
       .news-floater{
         width: 100%;
@@ -631,9 +631,9 @@
         left: inherit;
         right: 0;
       }
-      /* .btn-hero {
-        bottom: calc(100vh - 23rem);
-      } */
+      .newsSlider .swiper-slide.swiper-slide-active {
+        width: 100% !important;
+    }
      
 }
 

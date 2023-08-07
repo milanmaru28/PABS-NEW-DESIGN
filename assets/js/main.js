@@ -274,13 +274,15 @@ $(document).ready(function () {
   $(document).ready(function () {
     var mySwiper = new Swiper(".newsSlider", {
       slidesPerView: "auto",
-      spaceBetween: 25,
+      slidesPerView: 4,
+      spaceBetween: 15,
       grabCursor: true,
       loop: true,
       observer: true,
       observeParents: true,
+     
       autoplay: {
-        delay: 30000,
+        delay: 300000,
         disableOnInteraction: false,
       },
       on: {
@@ -292,7 +294,24 @@ $(document).ready(function () {
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
-      }
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        575: {
+          slidesPerView: 1,
+          spaceBetween: 15
+        },
+        // when window width is >= 480px
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 15
+        },
+        // when window width is >= 640px
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 15
+        }
+      },
     });
   });
 
